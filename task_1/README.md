@@ -21,5 +21,5 @@ The script should be run in a virtualenv created with the libraries in the `requ
 
 To run tests:
 ```commandline
-python unit_tests/task_1/find_pattern_test.py
+python test/find_pattern_test.py
 ```

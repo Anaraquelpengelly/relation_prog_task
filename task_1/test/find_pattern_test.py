@@ -6,7 +6,7 @@ sys.path.insert(0, parentdir)
 
 
 import unittest
-from functions import utils
+from scripts.functions import utils
 
 class TestFindPattern(unittest.TestCase):
     def test_true(self):
