@@ -21,7 +21,7 @@ Can be found in this csv: `result_task_3_subtask2.csv`.
 The two subtasks can we answered with the same script, which can be run as follows:
 
 ```commandline
-python <path_to_main>/main.py --path <path_to_human_proteins_dataset>
+python <path_to_main>/main.py
 ```
 The script should be run in a virtualenv created with the libraries in the `requirements.txt` file.
 

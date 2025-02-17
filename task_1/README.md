@@ -15,7 +15,7 @@ The script can be run as follows:
 
 To run the script:
 ```commandline
-python <path_to_main>/main.py --path <path_to_human_proteins_dataset>
+python <path_to_main>/main.py --path <path_to_human_proteins_dataset (clean)>
 ```
 The script should be run in a virtualenv created with the libraries in the `requirements.txt` file.
 

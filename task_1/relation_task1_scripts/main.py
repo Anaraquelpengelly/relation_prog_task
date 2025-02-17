@@ -10,7 +10,7 @@ from tap import Tap
 if __name__ == "__main__":
 
     class argparser_task1(Tap):
-        path: str = os.path.dirname(os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe()))))
+        path: str
         """Task_1 folder path"""
 
     parser = argparser_task1(
@@ -21,7 +21,7 @@ if __name__ == "__main__":
     # args
     PATH = args.path
     PATTERN = r"T[AV]T.T"
-    hu_proteins: Optional[DataFrame] = pd.read_csv(os.path.join(PATH, "human_proteins_clean.csv"),
+    hu_proteins: Optional[DataFrame] = pd.read_csv(PATH,
                           sep=",", lineterminator='\n')
     # we first convert the sequence column to string:
     hu_proteins['sequence'] = hu_proteins['sequence'].astype('string')
@@ -36,7 +36,7 @@ if __name__ == "__main__":
     hu_proteins_with_pattern = hu_proteins[hu_proteins['pattern'] == True]
 
     #save the dataframe as csv to the same folder
-    hu_proteins_with_pattern.drop(columns=["pattern", "Unnamed: 0"]).to_csv(os.path.join(PATH, "hu_proteins_with_pattern.csv"), index=False)
+    hu_proteins_with_pattern.drop(columns=["pattern", "Unnamed: 0"]).to_csv("hu_proteins_with_pattern.csv", index=False)
     print("file created!")
 
 
